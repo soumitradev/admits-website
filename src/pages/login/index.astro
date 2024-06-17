@@ -1,0 +1,12 @@
+---
+if (Astro.locals.user) {
+	return Astro.redirect("/");
+}
+const url = import.meta.env.FRONTEND_URL
+---
+<html lang="en">
+  <body>
+    <h1>Sign in to {url}</h1>
+    <a href="/login/google">Sign in with Google</a>
+  </body>
+</html>
